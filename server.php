@@ -111,11 +111,16 @@ if (isset($_POST['reg_user'])) {
   }
 }
 
+
+
+
+
+
 // LOGIN USER
 if (isset($_POST['login_user'])) {
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
-  // $type_user = mysqli_real_escape_string($db, $_POST['type_user']);
+  $type_user = mysqli_real_escape_string($db, $_POST['type_user']);
 
   if (empty($username)) {
     array_push($errors, "Username is required");
@@ -123,21 +128,33 @@ if (isset($_POST['login_user'])) {
   if (empty($password)) {
     array_push($errors, "Password is required");
   }
-  // if (empty($type_user)) {
-  //   array_push($errors, "Type of user is required");
-  // }
+  if (empty($type_user)) {
+    array_push($errors, "Type of user is required");
+  }
   // echo "asf";
 
   if (count($errors) == 0) {
     $password = md5($password);
-    $query = "SELECT * FROM users_admin WHERE username='$username' AND password='$password'";
+    $query = "SELECT * FROM users_admin WHERE username='$username' AND type_user='$type_user' AND password='$password'";
     $results = mysqli_query($db, $query);
 
     if (mysqli_num_rows($results) == 1) {
-      $_SESSION['username'] = $username;
-      $_SESSION['type_user'] = $type_user;
-      $_SESSION['success'] = "You are now logged in";
-      header('location: index.php');
+      $row = mysqli_fetch_assoc($results);
+
+      if ($row['type_user'] == 'System manager') {
+
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['type_user'] = $row['type_user'];
+        $_SESSION['success']  = "You are now logged in";
+        header('location: system.php');
+      } else if ($row['type_user'] == 'Host') {
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['type_user'] = $row['type_user'];
+        $_SESSION['success']  = "You are now logged in";
+        header('location: host.php');
+      } else {
+        array_push($errors, "Wrong! Your entry doesn't match, please try again.");
+      }
     } else {
       array_push($errors, "Wrong! Your entry doesn't match, please try again.");
     }
@@ -189,3 +206,19 @@ if (isset($_POST['login_user'])) {
 //     array_push($errors, "Wrong! Your entry doesn't match, please try again.");
 //   }
 // }
+
+
+      // if ($row['password'] === $password && $row['type_user'] == $type_user) {
+      //   $_SESSION['id'] = $row['id'];
+      //   $_SESSION['username'] = $row['username'];
+      //   $_SESSION['type_user'] = $row['type_user'];
+
+      //   $_SESSION['success'] = "You are now logged in";
+
+      //   if ($_SESSION['type_user'] == 'system manager') {
+      //     header('location: system_man.php');
+      //   } else if($_SESSION['type_user'] == 'host') {
+      //     header('location: host.php');
+      //   } else{
+      //     array_push($errors, "Wrong! Your entry doesn't match.");
+      //   }

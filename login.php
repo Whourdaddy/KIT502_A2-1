@@ -35,14 +35,14 @@
 
 
 		<!-- select type user -->
-		<!-- <div class="mb-1">
+		<div class="mb-1">
 			<label class="form-label">Select User Type:</label>
 		</div>
-		<select class="form-select mb-3" name="role" aria-label="Default select example">
+		<select class="form-select mb-3" name="type_user" aria-label="Default select example">
 			<option selected value=""></option>
 			<option value="system manager">System manager</option>
-			<option value="host">host</option>
-		</select> -->
+			<option value="host">Host</option>
+		</select>
 
 		<div class="input-group">
 			<!-- <button type="submit" class="btn" name="login_user">Login</button> -->

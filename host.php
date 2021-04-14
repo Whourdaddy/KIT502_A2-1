@@ -15,7 +15,7 @@ if (isset($_GET['logout'])) {
 <html>
 
 <head>
-	<title>Home</title>
+	<title>Host</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
