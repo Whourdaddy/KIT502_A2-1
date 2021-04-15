@@ -102,7 +102,7 @@ if (isset($_POST['reg_user'])) {
     if ($type_user == "System manager") {
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
-      header('location: system_man.php');
+      header('location: system.php');
     } else {
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
