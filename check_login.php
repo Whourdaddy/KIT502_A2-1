@@ -36,10 +36,10 @@ if (empty($username)) {
             $_SESSION['type_user'] = $row['type_user'];
             $_SESSION['username'] = $row['username'];
             if ($_SESSION['type_user'] == 'System manager') {
-                header('location: system_man.php');
+                header('location: ./php/sys_dashboard.php');
             }
             else {
-                header('location: host.php');
+                header('location: ./php/host_dashboard.php');
             }
             // header("Location: ../system_man.php");
             // header('location: system_man.php');

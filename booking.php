@@ -7,7 +7,7 @@ if (!isset($_SESSION['c_username'])) {
 }
 if (isset($_GET['logout'])) {
 	session_destroy();
-	unset($_SESSION['username']);
+	unset($_SESSION['c_username']);
 	header("location: customer_login.php");
 }
 ?>
@@ -16,7 +16,7 @@ if (isset($_GET['logout'])) {
 
 <head>
 	<title>Booking</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
