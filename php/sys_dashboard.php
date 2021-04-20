@@ -1,4 +1,6 @@
-<?php include "./CRUD/read.php";
+<?php 
+include "./CRUD/read.php";
+// include "./CRUD/update_cust.php";
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -197,9 +199,9 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['c_mobile']; ?></td>
 											<td><?php echo $rows['c_address']; ?></td>
 											<td><?php echo $rows['c_country']; ?></td>
-											<td><a href="update.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+											<td><a href="./CRUD/update_cust.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
 
-												<a href="php/delete.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+												<a href="./CRUD/delete_cust.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
 											</td>
 										</tr>
 									<?php } ?>
@@ -253,9 +255,9 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['mobile']; ?></td>
 											<td><?php echo $rows['address']; ?></td>
 											<td><?php echo $rows['country']; ?></td>
-											<td><a href="update.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+											<td><a href="./CRUD/update_admin.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
 
-												<a href="php/delete.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+												<a href="./CRUD/delete_admin.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
 											</td>
 										</tr>
 									<?php } ?>
