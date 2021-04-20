@@ -15,7 +15,7 @@ Group 3 last edit 26/03/2021 */
 }
 
 .db_sider {
-    width: 350px;
+    width: 250px;
     position: fixed;
     height: 100%;
     left: 0;
@@ -80,11 +80,9 @@ color: #191970;
 
 
 /* .dash_card_container ul li:hover{
-
 background: #191970;
 border-radius: 10px 10px 10px 10px;
 }
-
 .dash_card_container ul li a:hover{
 color: #fff;
 }
@@ -99,7 +97,7 @@ color: #fff;
 }
 
 .main_container {
-    margin-left: 350px;
+    margin-left: 250px;
 }
 
 header {
@@ -176,7 +174,7 @@ main {
 #review_content,
 #rate_content,
 #q_n_a_content {
-    color: #fff;
+    color: #191970;
     margin-top: 20px;
     width: 100%;
     height: 20px;
@@ -211,31 +209,36 @@ input::placeholder {
     color: #222 !important;
 }
 
-tr {
-    transition: all .25s ease-in-out
-}
 
-tr:hover {
+/* tr {
+    transition: all .25s ease-in-out
+} */
+
+
+/* tr:hover {
     background-color: #EEE;
     cursor: pointer
-}
+} */
 
-table {
+
+/* table {
     width: 100%;
-}
+} */
 
-table,
+
+/* table, */
+
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid #191970;
     border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 15px;
+    padding: 5px;
     text-align: left;
-    color: #333;
+    color: #191970;
 }
 
 #review_table tr,
