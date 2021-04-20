@@ -16,41 +16,37 @@
         <form method="post" action="update_cust.php">
 
 
-                <?php if (isset($_GET['error'])) { ?>
-                        <div class="alert alert-danger" role="alert">
-                                <?php echo $_GET['error']; ?>
-                        </div>
-                <?php } ?>
+                <?php include('../../errors.php'); ?>
                 <div class="input-group">
                         <label>Username</label>
-                        <input type="text" name="c_username" value="<?= $row['c_username'] ?>">
+                        <input type="text" name="c_username" value="<?php echo $c_username; ?>">
                 </div>
 
                 <div class="input-group">
                         <label>First Name</label>
-                        <input type="text" name="c_first_name" value="<?= $row['c_first_name'] ?>">
+                        <input type="text" name="c_first_name" value="<?php echo $c_first_name; ?>">
                 </div>
 
                 <div class="input-group">
                         <label>Last Name</label>
-                        <input type="text" name="c_last_name" value="<?= $row['c_last_name'] ?>">
+                        <input type="text" name="c_last_name" value="<?php echo $c_last_name; ?>">
                 </div>
                 <div class="input-group">
                         <label>Email</label>
-                        <input type="email" name="c_email" value="<?= $row['c_email'] ?>">
+                        <input type="email" name="c_email" value="<?php echo $c_email; ?>">
                 </div>
 
                 <div class="input-group">
                         <label>Mobile</label>
-                        <input type="text" name="c_mobile" value="<?= $row['c_mobile'] ?>">
+                        <input type="text" name="c_mobile" value="<?php echo $c_mobile; ?>">
                 </div>
                 <div class="input-group">
                         <label>Address</label>
-                        <input type="text" name="c_address" value="<?= $row['c_address'] ?>">
+                        <input type="text" name="c_address" value="<?php echo $c_address; ?>">
                 </div>
                 <div class="input-group">
                         <label>Country</label>
-                        <select class="c_country" name="c_country" value="<?= $row['c_country'] ?>"><br>
+                        <select class="c_country" name="c_country" value="<?php echo $c_country; ?>"><br>
                                 <option selected value=""></option>
                                 <option value="China">China</option>
                                 <option value="Australia">Australia</option>

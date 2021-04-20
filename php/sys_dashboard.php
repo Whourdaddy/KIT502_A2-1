@@ -425,7 +425,7 @@ Group 3 last edit 26/03/2021 -->
 	<!-- called the javascript files -->
 	<script src="../js/dashboard.js"></script>
 	<script src="../js/host_CRUD.js"></script>
-	<script src="../js/CRUD_user.js"></script>
+	<!-- <script src="../js/CRUD_user.js"></script> -->
 </body>
 
 </html>
