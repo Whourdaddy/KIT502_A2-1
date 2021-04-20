@@ -14,19 +14,23 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.box {
+.box_customer {
     width: 750px;
     margin-bottom: 50px;
 }
 
+.box_admin {
+    width: 750px;
+    margin-bottom: 50px;
+}
 
-/* .container table {
+.container table {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
+}
 
 .link-right {
-    display: flex;
+    /* display: flex; */
     justify-content: flex-end;
 }

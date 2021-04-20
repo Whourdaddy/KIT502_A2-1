@@ -158,7 +158,7 @@ Group 3 last edit 26/03/2021 -->
 
 				<!-- create and edit customers' details in the table -->
 				<div class="container">
-					<div class="box">
+					<div class="box_customer">
 						<h4 class="display-4 text-center">Customer</h4><br>
 						<?php if (isset($_GET['success'])) { ?>
 							<div class="alert alert-success" role="alert">
@@ -207,12 +207,12 @@ Group 3 last edit 26/03/2021 -->
 							</table>
 						<?php } ?>
 						<div class="link-right">
-							<a href="index.php" class="link-primary">Create</a>
+							<a href="./CRUD/create_cust.php" class="link-primary">Create</a>
 						</div>
 					</div>
 
 					<!-- admin user -->
-					<div class="box">
+					<div class="box_admin">
 						<h4 class="display-4 text-center">Admin user</h4><br>
 						<?php if (isset($_GET['success'])) { ?>
 							<div class="alert alert-success" role="alert">
@@ -263,7 +263,7 @@ Group 3 last edit 26/03/2021 -->
 							</table>
 						<?php } ?>
 						<div class="link-right">
-							<a href="index.php" class="link-primary">Create</a>
+							<a href="./CRUD/create_admin.php" class="link-primary">Create</a>
 						</div>
 					</div>
 				</div>
