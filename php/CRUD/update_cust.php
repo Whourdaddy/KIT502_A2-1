@@ -57,6 +57,7 @@
                         </select><br>
                 </div>
                 <div class="input-group">
+                
                         <button type="submit" class="btn btn-primary" name="update_cust_ad">Update</button>
                         <a href="../sys_dashboard.php" class="link-primary">View</a>
                 </div>
@@ -64,3 +65,9 @@
 </body>
 
 </html>
+
+
+<td><a href="update.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+
+<a href="php/delete.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+</td>

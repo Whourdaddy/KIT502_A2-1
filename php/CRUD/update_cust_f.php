@@ -95,6 +95,7 @@ if (isset($_GET['id'])) {
 
     // Finally, register user if there are no errors in the form
     if (count($errors) == 0) {
+        // print "hi peter";
         $query = "UPDATE users_customer SET c_username = '$c_username', c_first_name = '$c_first_name',
             c_last_name = '$c_last_name', c_email = '$c_email', c_mobile = '$c_mobile',
             c_address = '$c_address', c_country = '$c_country' WHERE id = '$id'";
