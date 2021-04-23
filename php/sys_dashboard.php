@@ -235,6 +235,7 @@ Group 3 last edit 26/03/2021 -->
 										<th scope="col">Mobile</th>
 										<th scope="col">Address</th>
 										<th scope="col">Country</th>
+										<th scope="col">ABN</th>
 										<th scope="col">Action</th>
 									</tr>
 								</thead>
@@ -255,6 +256,7 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['mobile']; ?></td>
 											<td><?php echo $rows['address']; ?></td>
 											<td><?php echo $rows['country']; ?></td>
+											<td><?php echo $rows['abn']; ?></td>
 											<td><a href="./CRUD/update_admin.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
 
 												<a href="./CRUD/delete_admin.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
