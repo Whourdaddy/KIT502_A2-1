@@ -119,7 +119,7 @@ Group 3 last edit 26/03/2021 -->
 							<div class="dash_card">
 								<div>
 									<h1>10</h1>
-									<span>Accommodations</span>
+									<span>Orders</span>
 								</div>
 								<div>
 									<span class="las la-shopping-bag"></span>
