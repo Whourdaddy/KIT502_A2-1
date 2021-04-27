@@ -1,7 +1,7 @@
 <?php
 session_start();
 // connect to the database
-include "db_conn.php";
+include "../db_conn.php";
 // initializing variables
 $c_username = "";
 $c_first_name = "";
@@ -88,7 +88,7 @@ if (isset($_POST['reg_customer'])) {
         mysqli_query($db, $query);
         $_SESSION['c_username'] = $c_username;
         $_SESSION['success'] = "You are now logged in";
-        header('location: ./customer/booking.php');
+        header('location: booking.php');
     }
 }
 
@@ -119,7 +119,7 @@ if (isset($_POST['login_customer'])) {
             $row = mysqli_fetch_assoc($results);
             $_SESSION['c_username'] = $row['c_username'];
             $_SESSION['success']  = "You are now logged in";
-            header('location: ./customer/booking.php');
+            header('location: booking.php');
         } else {
             array_push($errors, "Wrong! Your entry doesn't match, please try again.");
         }

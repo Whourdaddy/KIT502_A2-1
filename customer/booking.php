@@ -1,5 +1,5 @@
 <?php include('booking_server.php');
-session_start();
+// session_start();
 
 if (!isset($_SESSION['c_username'])) {
 	$_SESSION['msg'] = "You must log in first";
@@ -55,7 +55,7 @@ if (isset($_GET['logout'])) {
 
 		<!-- logged in user information -->
 		<?php if (isset($_SESSION['c_username'])) : ?>
-			<div class="user_log_suc" style="color: white;">
+			<div class="user_log_suc">
 				<p>Welcome <strong><?php echo $_SESSION['c_username']; ?></strong></p>
 				<p> <a href="customer_login.php?logout='1'">logout</a> </p>
 			</div>
@@ -74,14 +74,14 @@ if (isset($_GET['logout'])) {
 		</a>
 		<div class="nav_links">
 			<ul class="list_nav">
-				<li><a class="active_nav" href="./index.html">Home</a></li>
-				<li><a class="active_nav" href="../html/booking.html">Book</a></li>
+				<li><a class="active_nav" href="../home.php">Home</a></li>
+				<li><a class="active_nav" href="./booking.php">Book</a></li>
 				<li><a class="active_nav" href="#">Customer</a>
 					<div class="sub_user">
 						<ul>
-							<li><a href="../html/login_reg.html">Login</a></li>
-							<li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li>
-							<li><a href="../html/client_review.html">Review</a></li>
+							<li><a href="./customer_login.php">Login</a></li>
+							<!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
+							<li><a href="./review.php">Review</a></li>
 						</ul>
 					</div>
 				</li>

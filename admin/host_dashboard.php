@@ -3,12 +3,12 @@ session_start();
 
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
+    header('location: admin_login.php');
 }
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-    header("location: login.php");
+    header("location: admin_login.php");
 }
 ?>
 <!DOCTYPE html>
@@ -42,7 +42,7 @@ if (isset($_GET['logout'])) {
                         <span>Rates</span></a>
                 </li>
                 <li>
-                    <a href="../login.php?logout='1'" class="active_fun"><span class="las la-hotel"></span>
+                    <a href="admin_login.php?logout='1'" class="active_fun"><span class="las la-hotel"></span>
                         <span>Logout</span></a>
                 </li>
             </ul>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 // connect to the database
-include "db_conn.php";
+include "../db_conn.php";
 // initializing variables
 $type_user = "";
 $username = "";
@@ -102,11 +102,11 @@ if (isset($_POST['reg_user'])) {
     if ($type_user == "System manager") {
       $_SESSION['username'] = $username;
       // $_SESSION['success'] = "You are now logged in";
-      header('location: ./php/sys_dashboard.php');
+      header('location: sys_dashboard.php');
     } else {
       $_SESSION['username'] = $username;
       // $_SESSION['success'] = "You are now logged in";
-      header('location: ./php/host_dashboard.php');
+      header('location: host_dashboard.php');
     }
   }
 }
@@ -146,12 +146,12 @@ if (isset($_POST['login_user'])) {
         $_SESSION['username'] = $row['username'];
         $_SESSION['type_user'] = $row['type_user'];
         // $_SESSION['success']  = "You are now logged in";
-        header('location: ./php/sys_dashboard.php');
+        header('location: sys_dashboard.php');
       } else if ($row['type_user'] == 'Host') {
         $_SESSION['username'] = $row['username'];
         $_SESSION['type_user'] = $row['type_user'];
         // $_SESSION['success']  = "You are now logged in";
-        header('location: ./php/host_dashboard.php');
+        header('location: host_dashboard.php');
       } else {
         array_push($errors, "Wrong! Your entry doesn't match, please try again.");
       }

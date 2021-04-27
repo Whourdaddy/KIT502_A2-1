@@ -1,16 +1,16 @@
 <?php 
-include "./CRUD/read.php";
+include "./system_CRUD/read.php";
 // include "./CRUD/update_cust.php";
 session_start();
 
 if (!isset($_SESSION['username'])) {
 	$_SESSION['msg'] = "You must log in first";
-	header('location: login.php');
+	header('location: admin_login.php');
 }
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['username']);
-	header("location: login.php");
+	header("location: admin_login.php");
 }
 
 ?>
@@ -27,7 +27,7 @@ Group 3 last edit 26/03/2021 -->
 	<!-- link to font style  -->
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 	<link rel="stylesheet" href="../css/dashboard.css" />
-	<link rel="stylesheet" href="../css/CRUD.css" />
+	<link rel="stylesheet" href="../css/system_CRUD.css" />
 	<title>UTas system manager dashboard</title>
 </head>
 
@@ -58,7 +58,7 @@ Group 3 last edit 26/03/2021 -->
 				</li>
 
 				<li>
-					<a href="../login.php?logout='1'" class="active_fun"><span class="las la-hotel"></span>
+					<a href="admin_login.php?logout='1'" class="active_fun"><span class="las la-hotel"></span>
 						<span>Logout</span></a>
 				</li>
 			</ul>
@@ -199,9 +199,9 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['c_mobile']; ?></td>
 											<td><?php echo $rows['c_address']; ?></td>
 											<td><?php echo $rows['c_country']; ?></td>
-											<td><a href="./CRUD/update_cust.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+											<td><a href="./system_CRUD/update_cust.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
 
-												<a href="./CRUD/delete_cust.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+												<a href="./system_CRUD/delete_cust.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
 											</td>
 										</tr>
 									<?php } ?>
@@ -209,7 +209,7 @@ Group 3 last edit 26/03/2021 -->
 							</table>
 						<?php } ?>
 						<div class="link-right">
-							<a href="./CRUD/create_cust.php" class="link-primary">Create</a>
+							<a href="./system_CRUD/create_cust.php" class="link-primary">Create</a>
 						</div>
 					</div>
 
@@ -257,9 +257,9 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['address']; ?></td>
 											<td><?php echo $rows['country']; ?></td>
 											<td><?php echo $rows['abn']; ?></td>
-											<td><a href="./CRUD/update_admin.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+											<td><a href="./system_CRUD/update_admin.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
 
-												<a href="./CRUD/delete_admin.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+												<a href="./system_CRUD/delete_admin.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
 											</td>
 										</tr>
 									<?php } ?>
@@ -267,7 +267,7 @@ Group 3 last edit 26/03/2021 -->
 							</table>
 						<?php } ?>
 						<div class="link-right">
-							<a href="./CRUD/create_admin.php" class="link-primary">Create</a>
+							<a href="./system_CRUD/create_admin.php" class="link-primary">Create</a>
 						</div>
 					</div>
 				</div>

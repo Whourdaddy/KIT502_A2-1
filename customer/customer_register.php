@@ -4,7 +4,7 @@
 
 <head>
 	<title>Registration system PHP and MySQL</title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 	</div>
 
 	<form method="post" action="customer_register.php">
-		<?php include('errors.php'); ?>
+		<?php include('../errors.php'); ?>
 		<div class="input-group">
 			<label>Username</label>
 			<input type="text" name="c_username" value="<?php echo $c_username; ?>">

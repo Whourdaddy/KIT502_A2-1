@@ -1,10 +1,10 @@
-<?php include('server.php') ?>
+<?php include('admin_server.php') ?>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<title>Registration system PHP and MySQL</title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 	</div>
 
 	<form method="post" action="admin_register.php">
-		<?php include('errors.php'); ?>
+		<?php include('../errors.php'); ?>
 		<div class="input-group">
 			<label>Are you registering as a system manager or host?</label>
 			<select class="type_user" name="type_user" value="<?php echo $type_user; ?>"><br>
@@ -78,7 +78,7 @@
 			<button type="submit" class="btn" name="reg_user">Register</button>
 		</div>
 		<p>
-			Already a member? <a href="login.php">Sign in</a>
+			Already a member? <a href="admin_login.php">Sign in</a>
 		</p>
 	</form>
 </body>
