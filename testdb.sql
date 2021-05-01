@@ -185,3 +185,7 @@ COMMIT;
 --     (13, 'Single Room', 'Single', 'Free', 2),
 --     (14, 'Single Room', 'Double', 'Unavailable', 0),
 --     (15, 'Single Room', 'Triple', 'Free', 2);
+
+
+
+

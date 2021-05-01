@@ -83,9 +83,14 @@ if (isset($_POST['edit_cust'])) {
         // array_push($errors, "Country is required");
         header("Location: ./update_cust.php?id=$id&error=Country is required");
     } else {
-        $query = "UPDATE users_customer SET c_username = '$c_username', c_first_name = '$c_first_name',
-        c_last_name = '$c_last_name', c_email = '$c_email', c_mobile = '$c_mobile',
-        c_address = '$c_address', c_country = '$c_country' WHERE id = '$id'";
+        $query = "UPDATE users_customer SET c_username = '$c_username', 
+                                            c_first_name = '$c_first_name',
+                                            c_last_name = '$c_last_name', 
+                                            c_email = '$c_email', 
+                                            c_mobile = '$c_mobile',
+                                            c_address = '$c_address', 
+                                            c_country = '$c_country' 
+                                        WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         // var_dump($query);
         // var_dump($result);
@@ -153,3 +158,9 @@ if (isset($_POST['edit_cust'])) {
     //var_dump($_POST);
     // echo "No";
 }
+
+
+
+
+
+
