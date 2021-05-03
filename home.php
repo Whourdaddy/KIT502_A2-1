@@ -133,35 +133,53 @@ Group 3 last edit 26/03/2021 -->
     <div class="seperate_line"></div>
 
     <!--------------footer_part------------------->
-    <div class="footer_container">
-        <div class="about_us">
-            <h2>About us</h2>
-            <p>Our goal is to engage our guests and provide them with the best experience through harmonious, zealous and personable service in the most convenient, comfortable, intimate and welcoming setting.</p>
+    <!-- <div class="footer_container"> -->
+    <div class="contact_us">
+        <div class="contact_word">
+            <h1>Contact us</h1>
+            <p>
+                <strong>Address</strong>
+                <br>Churchill Ave
+                <br>Hobart TAS 7005
+            </p>
+
+            <p>
+                <strong>Phone</strong>
+                <br>+61362262999
+            </p>
         </div>
 
-        <div class="social_main">
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="./img/footer_social/fb.png" alt=""></a>
-                </li>
-            </div>
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="./img/footer_social/ins.png" alt=""></a>
-                </li>
-            </div>
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="./img/footer_social/twitter.webp" alt=""></a>
-                </li>
-            </div>
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="./img/footer_social/youtube.jpeg" alt=""></a>
-                </li>
-            </div>
+        <div class="google_map">
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.5404210451375!2d147.32365931566832!3d-42.9036422497168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6ddf5a09db9cc9%3A0xf03c94eb451f680!2sUniversity%20of%20Tasmania!5e0!3m2!1sen!2sau!4v1620016679034!5m2!1sen!2sau" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
         </div>
     </div>
+
+
+
+
+    <div class="social_main">
+        <div class="social_container">
+            <li>
+                <a href=""><img src="./img/footer_social/fb.png" alt=""></a>
+            </li>
+        </div>
+        <div class="social_container">
+            <li>
+                <a href=""><img src="./img/footer_social/ins.png" alt=""></a>
+            </li>
+        </div>
+        <div class="social_container">
+            <li>
+                <a href=""><img src="./img/footer_social/twitter.webp" alt=""></a>
+            </li>
+        </div>
+        <div class="social_container">
+            <li>
+                <a href=""><img src="./img/footer_social/youtube.jpeg" alt=""></a>
+            </li>
+        </div>
+    </div>
+    <!-- </div> -->
     <!-- footer part -->
     <footer>
         <p>Copyright &copy; , KIT_502 Assignment_2</p>
